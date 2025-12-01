@@ -18,10 +18,11 @@ export const ContactSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           {/* Header */}
-          <span className="font-handwriting text-3xl text-gold">ready to collaborate?</span>
-          <h2 className="font-display text-5xl md:text-7xl font-bold mt-4 mb-8">
+          <span className="font-handwriting text-3xl text-gold">ready to collaborate? ✨</span>
+          <h2 className="font-display text-5xl md:text-7xl font-bold mt-4 mb-4">
             Let's Create Together
           </h2>
+          <span className="font-handwriting text-xl text-[hsl(25_80%_75%)] block mb-8">can't wait to hear from you! 💌</span>
           <p className="text-secondary-foreground/80 text-lg mb-12 max-w-xl mx-auto">
             I'd love to help you create your next high-converting campaign. Let's chat about how we can work together!
           </p>

@@ -12,10 +12,11 @@ export const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <span className="font-handwriting text-2xl text-primary">get to know</span>
+            <span className="font-handwriting text-2xl text-[hsl(25_80%_65%)]">get to know me ✨</span>
             <h2 className="font-display text-5xl md:text-6xl font-bold text-secondary mt-2">
               About Me
             </h2>
+            <span className="font-handwriting text-lg text-[hsl(25_80%_65%)] mt-2 block">here's my story!</span>
           </div>
 
           {/* Content grid */}
