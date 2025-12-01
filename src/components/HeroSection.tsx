@@ -1,167 +1,106 @@
-import { Sparkle } from "./Sparkle";
 import simranPhoto from "@/assets/simran-photo.png";
 
 export const HeroSection = () => {
-  const blurredStats = [
-    "2.5M+ views this month",
-    "98% non-follower reach",
-    "Fastest-growing study & AI creator",
-    "Student Productivity • AI Tools • Self Growth",
-    "Community of 6.4k+",
-    "High engagement rate",
-    "Viral content creator",
-    "Authentic storytelling",
-  ];
-
   return (
-    <section className="relative min-h-screen gradient-hero overflow-hidden flex items-center justify-center">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 text-gold animate-float">
-          <Sparkle size="lg" />
-        </div>
-        <div className="absolute top-40 right-20 text-primary animate-float-delayed">
-          <Sparkle size="md" />
-        </div>
-        <div className="absolute bottom-40 left-1/4 text-gold animate-sparkle">
-          <Sparkle size="sm" />
-        </div>
-        <div className="absolute bottom-20 right-1/3 text-primary/60 animate-float">
-          <Sparkle size="lg" />
-        </div>
-        
-        {/* Decorative circles */}
-        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
-      </div>
+    <section className="relative min-h-screen bg-gradient-to-br from-cream via-background to-peach/20 overflow-hidden">
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+      }} />
 
-      {/* Blurred background stats layer */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        {blurredStats.map((stat, index) => (
-          <span
-            key={index}
-            className="absolute font-handwriting text-secondary/[0.08] blur-[2px] text-2xl md:text-3xl whitespace-nowrap"
-            style={{
-              top: `${15 + (index * 12) % 70}%`,
-              left: `${5 + (index * 17) % 85}%`,
-              transform: `rotate(${-10 + (index * 7) % 20}deg)`,
-            }}
-          >
-            {stat}
-          </span>
-        ))}
-        {/* Additional scattered stats */}
-        <span className="absolute top-[20%] right-[15%] font-handwriting text-primary/[0.06] blur-[3px] text-xl md:text-2xl rotate-12">
-          2M+ Top Views
-        </span>
-        <span className="absolute bottom-[30%] left-[8%] font-handwriting text-secondary/[0.07] blur-[2px] text-xl md:text-2xl -rotate-6">
-          Viral Reels
-        </span>
-        <span className="absolute top-[60%] right-[10%] font-handwriting text-primary/[0.05] blur-[3px] text-2xl rotate-3">
-          Growing Fast
-        </span>
-        <span className="absolute top-[40%] left-[20%] font-handwriting text-secondary/[0.06] blur-[2px] text-xl -rotate-12">
-          Content That Converts
-        </span>
-      </div>
-
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4">
+      <div className="container mx-auto px-6 py-12 lg:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[80vh]">
           
           {/* Left side - Name and tags */}
-          <div className="hidden lg:flex flex-col items-end text-right space-y-4 animate-slide-up">
-            <span className="font-handwriting text-3xl text-primary">hey, I'm</span>
-            <h1 className="font-display text-6xl xl:text-7xl font-bold text-secondary tracking-tight">
-              Sim
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 animate-fade-in">
+            {/* Signature-style name */}
+            <h1 className="font-handwriting text-7xl md:text-8xl lg:text-9xl text-secondary tracking-tight leading-none mb-6" style={{
+              textShadow: '2px 4px 8px rgba(0,0,0,0.08)',
+            }}>
+              Simran
             </h1>
-            <div className="flex flex-col gap-2">
-              <span className="px-4 py-1.5 rounded-full border-2 border-secondary/20 text-secondary font-medium text-sm">
-                AI Tools
-              </span>
-              <span className="px-4 py-1.5 rounded-full border-2 border-secondary/20 text-secondary font-medium text-sm">
-                Student Life
-              </span>
+            
+            {/* Category tags */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+              {["AI Tools", "Student Life", "Productivity", "Self-Growth"].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-5 py-2 rounded-full bg-secondary/5 border border-secondary/15 text-secondary/80 font-medium text-sm tracking-wide hover:bg-secondary/10 transition-colors"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Media Kit badge */}
+            <div className="mt-4">
+              <button className="group relative bg-secondary text-secondary-foreground px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <span className="font-display text-lg font-semibold tracking-widest uppercase">
+                  Media Kit
+                </span>
+                <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+              </button>
             </div>
           </div>
 
-          {/* Center - Photo */}
-          <div className="relative animate-slide-up-delay-1">
-            <div className="relative z-10">
+          {/* Right side - Photo */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="relative">
+              {/* Soft shadow behind image */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-peach/30 to-cream/40 blur-3xl scale-110 translate-y-4" />
+              
+              {/* Vignette overlay */}
+              <div className="absolute inset-0 rounded-3xl" style={{
+                background: 'radial-gradient(ellipse at center, transparent 50%, hsl(var(--cream)) 100%)',
+              }} />
+              
+              {/* Photo */}
               <img
                 src={simranPhoto}
-                alt="Simran"
-                className="w-64 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl"
+                alt="Simran - Content Creator"
+                className="relative z-10 w-72 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl"
+                style={{
+                  filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.15))',
+                }}
               />
             </div>
-            {/* Glow behind photo */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-gold/20 blur-3xl scale-110" />
-            
-            {/* Mobile name overlay */}
-            <div className="lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-center">
-              <span className="font-handwriting text-2xl text-primary block">hey, I'm</span>
-              <h1 className="font-display text-5xl md:text-6xl font-bold text-secondary tracking-tight">
-                Simran
-              </h1>
+          </div>
+        </div>
+
+        {/* Stats section */}
+        <div className="mt-8 lg:mt-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-3 gap-4 md:gap-12 max-w-3xl mx-auto lg:mx-0">
+            <div className="text-center lg:text-left">
+              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-secondary tracking-tight">
+                6.4k+
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base mt-2 tracking-wide">
+                Followers
+              </p>
             </div>
-          </div>
-
-          {/* Right side - Name continuation and tags */}
-          <div className="hidden lg:flex flex-col items-start text-left space-y-4 animate-slide-up">
-            <h1 className="font-display text-6xl xl:text-7xl font-bold text-secondary tracking-tight">
-              ran
-            </h1>
-            <div className="flex flex-col gap-2">
-              <span className="px-4 py-1.5 rounded-full border-2 border-secondary/20 text-secondary font-medium text-sm">
-                Productivity
-              </span>
-              <span className="px-4 py-1.5 rounded-full border-2 border-secondary/20 text-secondary font-medium text-sm">
-                Self-Growth
-              </span>
+            <div className="text-center lg:text-left">
+              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
+                2M+
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base mt-2 tracking-wide">
+                Top Views
+              </p>
             </div>
-          </div>
-        </div>
-
-        {/* Mobile tags */}
-        <div className="lg:hidden flex flex-wrap justify-center gap-3 mt-16 animate-slide-up-delay-1">
-          {["AI", "Student Life", "Productivity", "Self-Growth"].map((tag) => (
-            <span
-              key={tag}
-              className="px-5 py-2 rounded-full border-2 border-secondary/20 text-secondary font-medium text-sm"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Media Kit badge */}
-        <div className="animate-slide-up-delay-2 mt-12 lg:mt-16 flex justify-center">
-          <div className="bg-secondary text-secondary-foreground px-8 py-4 rounded-2xl shadow-card hover:scale-105 transition-transform cursor-pointer">
-            <span className="font-display text-2xl md:text-3xl font-semibold tracking-wide">
-              MEDIA KIT
-            </span>
-          </div>
-        </div>
-
-        {/* Stats preview */}
-        <div className="animate-slide-up-delay-3 mt-16 grid grid-cols-3 gap-8 md:gap-16 max-w-3xl mx-auto">
-          <div className="text-center">
-            <p className="font-display text-3xl md:text-5xl font-bold text-secondary">6.4k+</p>
-            <p className="text-muted-foreground text-sm md:text-base mt-1">Followers</p>
-          </div>
-          <div className="text-center">
-            <p className="font-display text-3xl md:text-5xl font-bold text-primary">2M+</p>
-            <p className="text-muted-foreground text-sm md:text-base mt-1">Top Views</p>
-          </div>
-          <div className="text-center">
-            <p className="font-display text-3xl md:text-5xl font-bold text-secondary">98.9%</p>
-            <p className="text-muted-foreground text-sm md:text-base mt-1">Non-Follower Reach</p>
+            <div className="text-center lg:text-left">
+              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-secondary tracking-tight">
+                98.9%
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base mt-2 tracking-wide">
+                Non-Follower Reach
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-subtle">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
           <div className="w-6 h-10 rounded-full border-2 border-secondary/30 flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-secondary/50 rounded-full" />
+            <div className="w-1 h-3 bg-secondary/40 rounded-full" />
           </div>
         </div>
       </div>
