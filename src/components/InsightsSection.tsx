@@ -1,13 +1,19 @@
 import { Sparkle } from "./Sparkle";
 import { DoodleArrow } from "./DoodleArrow";
 
+const HandwrittenNote = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+  <span className={`font-handwriting text-lg md:text-xl text-[hsl(25_80%_65%)] ${className}`}>
+    {children}
+  </span>
+);
+
 const StatBar = ({ label, value, percentage, color }: { label: string; value: string; percentage: number; color: string }) => (
   <div className="space-y-2">
     <div className="flex justify-between text-sm">
       <span className="text-foreground font-medium">{label}</span>
-      <span className="text-muted-foreground">{value}</span>
+      <span className="text-muted-foreground font-semibold">{value}</span>
     </div>
-    <div className="h-3 bg-muted rounded-full overflow-hidden">
+    <div className="h-4 bg-white/60 rounded-full overflow-hidden shadow-inner">
       <div
         className={`h-full rounded-full transition-all duration-1000 ease-out ${color}`}
         style={{ width: `${percentage}%` }}
@@ -18,128 +24,196 @@ const StatBar = ({ label, value, percentage, color }: { label: string; value: st
 
 const CircleStat = ({ value, label, color }: { value: string; label: string; color: string }) => (
   <div className="flex flex-col items-center">
-    <div className={`w-24 h-24 md:w-32 md:h-32 rounded-full ${color} flex items-center justify-center shadow-card`}>
-      <span className="font-display text-2xl md:text-3xl font-bold text-secondary-foreground">{value}</span>
+    <div className={`w-20 h-20 md:w-28 md:h-28 rounded-full ${color} flex items-center justify-center shadow-lg border-4 border-white/50`}>
+      <span className="font-display text-xl md:text-2xl font-bold text-white">{value}</span>
     </div>
-    <span className="mt-3 text-sm text-muted-foreground font-medium">{label}</span>
+    <span className="mt-3 text-sm text-foreground font-medium">{label}</span>
   </div>
 );
 
-export const InsightsSection = () => {
+// Donut chart component
+const DonutChart = ({ segments, centerText }: { segments: { value: number; color: string; label: string }[]; centerText: string }) => {
+  const total = segments.reduce((acc, seg) => acc + seg.value, 0);
+  let currentAngle = 0;
+  
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
+    <div className="relative w-32 h-32 md:w-40 md:h-40">
+      <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+        {segments.map((segment, index) => {
+          const angle = (segment.value / total) * 360;
+          const startAngle = currentAngle;
+          currentAngle += angle;
+          
+          const startRad = (startAngle * Math.PI) / 180;
+          const endRad = ((startAngle + angle) * Math.PI) / 180;
+          
+          const x1 = 50 + 40 * Math.cos(startRad);
+          const y1 = 50 + 40 * Math.sin(startRad);
+          const x2 = 50 + 40 * Math.cos(endRad);
+          const y2 = 50 + 40 * Math.sin(endRad);
+          
+          const largeArc = angle > 180 ? 1 : 0;
+          
+          return (
+            <path
+              key={index}
+              d={`M 50 50 L ${x1} ${y1} A 40 40 0 ${largeArc} 1 ${x2} ${y2} Z`}
+              fill={segment.color}
+              className="drop-shadow-sm"
+            />
+          );
+        })}
+        <circle cx="50" cy="50" r="25" fill="white" />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="font-display text-lg md:text-xl font-bold text-secondary">{centerText}</span>
+      </div>
+    </div>
+  );
+};
+
+export const InsightsSection = () => {
+  const reachSegments = [
+    { value: 99.7, color: "hsl(280 60% 70%)", label: "Non-Followers" },
+    { value: 0.3, color: "hsl(45 90% 65%)", label: "Followers" },
+  ];
+
+  return (
+    <section className="py-24 relative overflow-hidden insights-grid-bg">
+      {/* Pink dotted grid background - applied via CSS class */}
+      
       {/* Decorative doodles */}
-      <div className="absolute top-32 left-8 text-primary/40 rotate-12">
+      <div className="absolute top-32 left-8 text-[hsl(25_80%_65%)] rotate-12">
         <DoodleArrow direction="right" />
       </div>
       <div className="absolute top-20 right-16 text-gold animate-float">
         <Sparkle size="lg" />
       </div>
-      <div className="absolute bottom-40 right-8 text-primary/30 -rotate-45">
+      <div className="absolute bottom-40 right-8 text-[hsl(25_80%_65%)] -rotate-45">
         <DoodleArrow direction="curved" />
       </div>
       <div className="absolute bottom-20 left-20 text-gold/50">
         <Sparkle size="md" />
       </div>
 
-      {/* Hand-drawn circle decoration */}
-      <svg className="absolute top-1/4 left-1/4 w-40 h-40 text-primary/10 -translate-x-1/2" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5,5" />
-      </svg>
+      {/* Handwritten note - top right */}
+      <div className="absolute top-16 right-24 hidden md:block">
+        <HandwrittenNote className="rotate-6">Numbers don't lie! ✨</HandwrittenNote>
+      </div>
+
+      {/* Small decorative circles */}
+      <div className="absolute top-1/3 left-16 w-8 h-8 rounded-full bg-[hsl(200_70%_80%)] opacity-60" />
+      <div className="absolute bottom-1/4 right-32 w-6 h-6 rounded-full bg-[hsl(330_70%_80%)] opacity-50" />
+      <div className="absolute top-2/3 left-1/3 w-4 h-4 rounded-full bg-[hsl(45_90%_70%)] opacity-70" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="font-handwriting text-2xl text-primary">the numbers</span>
+          <HandwrittenNote className="block mb-2">the numbers ✨</HandwrittenNote>
           <h2 className="font-display text-5xl md:text-6xl font-bold text-secondary mt-2">
             Insights & Analytics
           </h2>
+          <HandwrittenNote className="block mt-4">Check this out! 👀</HandwrittenNote>
         </div>
 
         <div className="max-w-6xl mx-auto">
           {/* Main stats grid */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            {/* Left: Bar chart style */}
-            <div className="bg-background rounded-3xl p-8 shadow-card border border-border">
-              <h3 className="font-display text-2xl font-semibold text-secondary mb-6">
-                Reach Breakdown
-              </h3>
-              <div className="space-y-6">
-                <StatBar 
-                  label="Non-Followers" 
-                  value="99.7%" 
-                  percentage={99.7} 
-                  color="bg-primary" 
-                />
-                <StatBar 
-                  label="Followers" 
-                  value="0.3%" 
-                  percentage={30} 
-                  color="bg-gold" 
-                />
-                <StatBar 
-                  label="Accounts Reached" 
-                  value="1.6M+" 
-                  percentage={85} 
-                  color="bg-secondary" 
-                />
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Left: Reach Breakdown with donut chart */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-[hsl(330_60%_90%)]">
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="font-display text-2xl font-semibold text-secondary">
+                  Reach Breakdown
+                </h3>
+                <HandwrittenNote className="text-base">wow! 🚀</HandwrittenNote>
               </div>
               
-              {/* Mini doodle */}
-              <div className="absolute -right-4 top-1/2 text-gold/60 hidden md:block">
-                <DoodleArrow direction="left" className="w-16 h-8" />
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <DonutChart segments={reachSegments} centerText="99.7%" />
+                <div className="space-y-4 flex-1">
+                  <StatBar 
+                    label="Non-Followers" 
+                    value="99.7%" 
+                    percentage={99.7} 
+                    color="bg-[hsl(280_60%_70%)]" 
+                  />
+                  <StatBar 
+                    label="Followers" 
+                    value="0.3%" 
+                    percentage={30} 
+                    color="bg-[hsl(45_90%_65%)]" 
+                  />
+                  <StatBar 
+                    label="Accounts Reached" 
+                    value="1.6M+" 
+                    percentage={85} 
+                    color="bg-[hsl(200_70%_70%)]" 
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Right: Circle stats */}
-            <div className="bg-background rounded-3xl p-8 shadow-card border border-border">
-              <h3 className="font-display text-2xl font-semibold text-secondary mb-6">
-                Engagement Stats
-              </h3>
+            {/* Right: Engagement Stats */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-[hsl(330_60%_90%)]">
+              <div className="flex items-start justify-between mb-6">
+                <h3 className="font-display text-2xl font-semibold text-secondary">
+                  Engagement Stats
+                </h3>
+                <HandwrittenNote className="text-base">Growing fast 🌱</HandwrittenNote>
+              </div>
               <div className="flex flex-wrap justify-center gap-6">
-                <CircleStat value="63K" label="Likes" color="bg-primary" />
-                <CircleStat value="58K" label="Saves" color="bg-gold" />
-                <CircleStat value="67K" label="Shares" color="bg-secondary" />
+                <CircleStat value="63K" label="Likes" color="bg-[hsl(200_70%_70%)]" />
+                <CircleStat value="58K" label="Saves" color="bg-[hsl(330_70%_75%)]" />
+                <CircleStat value="67K" label="Shares" color="bg-[hsl(280_60%_70%)]" />
               </div>
             </div>
           </div>
 
           {/* Bottom: Key metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: "Total Views", value: "2M+", icon: "👁" },
-              { label: "Interactions", value: "190K+", icon: "💬" },
-              { label: "Profile Activity", value: "6,355", icon: "👤" },
-              { label: "Comments", value: "256+", icon: "💭" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-gradient-to-br from-peach to-background rounded-2xl p-6 text-center shadow-soft border border-border hover:shadow-card transition-shadow"
-              >
-                <span className="text-3xl mb-2 block">{stat.icon}</span>
-                <p className="font-display text-3xl font-bold text-secondary">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-              </div>
-            ))}
+          <div className="relative">
+            <div className="absolute -top-8 left-8 hidden md:block">
+              <DoodleArrow direction="down" className="text-[hsl(25_80%_65%)] w-8 h-12" />
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { label: "Total Views", value: "2M+", icon: "👁", color: "from-[hsl(200_70%_85%)] to-[hsl(200_70%_95%)]" },
+                { label: "Interactions", value: "190K+", icon: "💬", color: "from-[hsl(330_70%_85%)] to-[hsl(330_70%_95%)]" },
+                { label: "Profile Activity", value: "6,355", icon: "👤", color: "from-[hsl(280_60%_85%)] to-[hsl(280_60%_95%)]" },
+                { label: "Comments", value: "256+", icon: "💭", color: "from-[hsl(45_90%_80%)] to-[hsl(45_90%_92%)]" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className={`bg-gradient-to-br ${stat.color} rounded-2xl p-5 md:p-6 text-center shadow-md border border-white/50 hover:shadow-lg transition-shadow hover:-translate-y-1`}
+                >
+                  <span className="text-2xl md:text-3xl mb-2 block">{stat.icon}</span>
+                  <p className="font-display text-2xl md:text-3xl font-bold text-secondary">{stat.value}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground mt-1 font-medium">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Audience demographics */}
-          <div className="mt-16 bg-background rounded-3xl p-8 shadow-card border border-border">
-            <h3 className="font-display text-2xl font-semibold text-secondary mb-6 text-center">
-              Audience Demographics
-            </h3>
+          <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-[hsl(330_60%_90%)]">
+            <div className="text-center mb-6">
+              <h3 className="font-display text-2xl font-semibold text-secondary">
+                Audience Demographics
+              </h3>
+              <HandwrittenNote className="block mt-2">Who's watching? 👇</HandwrittenNote>
+            </div>
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <span className="font-handwriting text-4xl text-primary">16-28</span>
-                <p className="text-muted-foreground mt-2">Age Range</p>
+              <div className="p-4 rounded-2xl bg-[hsl(200_70%_92%)]">
+                <span className="font-handwriting text-4xl text-[hsl(200_70%_45%)]">16-28</span>
+                <p className="text-muted-foreground mt-2 font-medium">Age Range</p>
               </div>
-              <div>
-                <span className="font-handwriting text-4xl text-primary">Female Majority</span>
-                <p className="text-muted-foreground mt-2">Gender Split</p>
+              <div className="p-4 rounded-2xl bg-[hsl(330_70%_92%)]">
+                <span className="font-handwriting text-4xl text-[hsl(330_70%_50%)]">Female Majority</span>
+                <p className="text-muted-foreground mt-2 font-medium">Gender Split</p>
               </div>
-              <div>
-                <span className="font-handwriting text-4xl text-primary">India 🇮🇳</span>
-                <p className="text-muted-foreground mt-2">Top Location</p>
+              <div className="p-4 rounded-2xl bg-[hsl(45_90%_88%)]">
+                <span className="font-handwriting text-4xl text-[hsl(45_90%_35%)]">India 🇮🇳</span>
+                <p className="text-muted-foreground mt-2 font-medium">Top Location</p>
               </div>
             </div>
           </div>

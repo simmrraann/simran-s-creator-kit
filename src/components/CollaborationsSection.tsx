@@ -102,13 +102,14 @@ export const CollaborationsSection = () => {
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="font-handwriting text-2xl text-primary">brands i've worked with</span>
+          <span className="font-handwriting text-2xl text-[hsl(25_80%_65%)]">brands I've worked with ✨</span>
           <h2 className="font-display text-5xl md:text-6xl font-bold text-secondary mt-2">
             Collaborations
           </h2>
           <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
             Delivering high-quality content that resonates with audiences and drives results
           </p>
+          <span className="font-handwriting text-lg text-[hsl(25_80%_65%)] mt-2 block">see what we created! 🎬</span>
         </div>
 
         {/* Collaboration cards */}

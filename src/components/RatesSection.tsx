@@ -85,10 +85,11 @@ export const RatesSection = () => {
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="font-handwriting text-2xl text-primary">let's work together</span>
+          <span className="font-handwriting text-2xl text-[hsl(25_80%_65%)]">let's work together ✨</span>
           <h2 className="font-display text-5xl md:text-6xl font-bold text-secondary mt-2">
             Rates & Packages
           </h2>
+          <span className="font-handwriting text-lg text-[hsl(25_80%_65%)] mt-2 block">investment that converts! 💰</span>
         </div>
 
         {/* Instagram rates */}
