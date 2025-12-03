@@ -73,19 +73,19 @@ export const CollaborationsSection = () => {
       brand: "LeapScholar",
       type: "Instagram Reel + Story",
       views: "34.1K",
-      link: "https://instagram.com",
+      link: "https://www.instagram.com/reel/DQ_WS0_DOSJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
     {
       brand: "SuperProfileBio",
       type: "Instagram Reel",
       views: "Scheduled",
-      link: "https://instagram.com",
+      link: "https://www.instagram.com/reel/DRL2rXICKvo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
     {
-      brand: "Neo Browser",
+      brand: "Kimi",
       type: "Product Feature",
       views: "28.6K",
-      link: "https://instagram.com",
+      link: "https://www.instagram.com/reel/DRpRDvVDHFB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
   ];
 
@@ -125,7 +125,7 @@ export const CollaborationsSection = () => {
             Trusted by
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {["LeapScholar", "SuperProfileBio", "Neo Browser"].map((brand) => (
+            {['LeapScholar', 'SuperProfileBio', 'Kimi'].map((brand) => (
               <div
                 key={brand}
                 className="px-6 py-3 bg-card rounded-xl shadow-soft border border-border hover:shadow-card transition-shadow"

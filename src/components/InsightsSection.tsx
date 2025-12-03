@@ -175,12 +175,13 @@ export const InsightsSection = () => {
               <DoodleArrow direction="down" className="text-[hsl(25_80%_65%)] w-8 h-12" />
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
               {[
-                { label: "Total Views", value: "2M+", icon: "👁", color: "from-[hsl(200_70%_85%)] to-[hsl(200_70%_95%)]" },
-                { label: "Interactions", value: "190K+", icon: "💬", color: "from-[hsl(330_70%_85%)] to-[hsl(330_70%_95%)]" },
-                { label: "Profile Activity", value: "6,355", icon: "👤", color: "from-[hsl(280_60%_85%)] to-[hsl(280_60%_95%)]" },
+                { label: "Total Views", value: "2.4M+", icon: "👁", color: "from-[hsl(200_70%_85%)] to-[hsl(200_70%_95%)]" },
+                { label: "Interactions", value: "297.2K+", icon: "💬", color: "from-[hsl(330_70%_85%)] to-[hsl(330_70%_95%)]" },
+                { label: "Profile Activity", value: "6.7K+", icon: "👤", color: "from-[hsl(280_60%_85%)] to-[hsl(280_60%_95%)]" },
                 { label: "Comments", value: "256+", icon: "💭", color: "from-[hsl(45_90%_80%)] to-[hsl(45_90%_92%)]" },
+				{ label: "Weekly Views", value: "143K+", icon: "📈", color: "from-green-200 to-green-300" },
               ].map((stat) => (
                 <div
                   key={stat.label}

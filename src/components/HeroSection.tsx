@@ -12,16 +12,16 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[80vh]">
           
           {/* Left side - Name and tags */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 animate-fade-in">
+          <div className="flex flex-col items-center text-center order-2 lg:order-1 animate-fade-in">
             {/* Signature-style name */}
-            <h1 className="font-handwriting text-7xl md:text-8xl lg:text-9xl text-secondary tracking-tight leading-none mb-6" style={{
-              textShadow: '2px 4px 8px rgba(0,0,0,0.08)',
+            <h1 className="font-handwriting font-bold text-7xl md:text-8xl lg:text-9xl bg-gradient-to-r from-primary via-secondary to-peach bg-clip-text text-transparent tracking-tight leading-none mb-6" style={{
+              textShadow: '2px 4px 8px rgba(0,0,0,0.05)',
             }}>
               Simran
             </h1>
             
             {/* Category tags */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
               {["AI Tools", "Student Life", "Productivity", "Self-Growth"].map((tag) => (
                 <span
                   key={tag}
@@ -69,8 +69,8 @@ export const HeroSection = () => {
 
         {/* Stats section */}
         <div className="mt-8 lg:mt-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <div className="grid grid-cols-3 gap-4 md:gap-12 max-w-3xl mx-auto lg:mx-0">
-            <div className="text-center lg:text-left">
+          <div className="grid grid-cols-3 gap-4 md:gap-12 max-w-3xl mx-auto">
+            <div className="text-center">
               <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-secondary tracking-tight">
                 6.4k+
               </p>
@@ -78,7 +78,7 @@ export const HeroSection = () => {
                 Followers
               </p>
             </div>
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight">
                 2M+
               </p>
@@ -86,7 +86,7 @@ export const HeroSection = () => {
                 Top Views
               </p>
             </div>
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <p className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-secondary tracking-tight">
                 98.9%
               </p>

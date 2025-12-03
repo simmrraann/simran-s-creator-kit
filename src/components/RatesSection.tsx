@@ -62,7 +62,7 @@ export const RatesSection = () => {
     },
     {
       title: "UGC Raw + Edit",
-      price: "₹4,000",
+      price: "₹5,000",
       features: ["Raw footage", "Basic editing", "Quick turnaround"],
     },
     {
