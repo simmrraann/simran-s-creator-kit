@@ -1,5 +1,3 @@
-import simranPhoto from "@/assets/simran-photo.png";
-
 export const HeroSection = () => {
   const hero = {
     title: "Simran",
@@ -11,7 +9,7 @@ export const HeroSection = () => {
       monthlyViews: "2.4M+",
       nonFollowerReach: "96%"
     },
-    heroImage: "https://firebasestorage.googleapis.com/v0/b/builder-406918.appspot.com/o/simran.png?alt=media&token=d1a8e927-350c-4575-9614-1193933e1466",
+    heroImage: "/images/simran-photo.jpg",
     backgroundStyle: {
       gradient: "linear-gradient(to bottom right, #fdf5ee, #fbead7)",
       textFont: "Playfair Display",

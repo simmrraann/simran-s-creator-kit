@@ -1,5 +1,5 @@
-import { Play, Pause, ExternalLink } from "lucide-react";
-import { useState } from "react";
+
+import { ExternalLink } from "lucide-react";
 import { Sparkle } from "./Sparkle";
 import { DoodleArrow } from "./DoodleArrow";
 
@@ -12,8 +12,6 @@ interface CollabCardProps {
 }
 
 const CollabCard = ({ brand, type, views, link, thumbnail }: CollabCardProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
   return (
     <div className="group relative">
       <div className="border-4 border-secondary rounded-2xl overflow-hidden bg-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2">
@@ -26,19 +24,6 @@ const CollabCard = ({ brand, type, views, link, thumbnail }: CollabCardProps) =>
             </div>
           )}
           
-          <button
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="absolute inset-0 flex items-center justify-center bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-              {isPlaying ? (
-                <Pause className="w-6 h-6 text-secondary-foreground fill-secondary-foreground" />
-              ) : (
-                <Play className="w-6 h-6 text-secondary-foreground fill-secondary-foreground ml-1" />
-              )}
-            </div>
-          </button>
-
           <div className="absolute bottom-3 left-3 bg-secondary/90 text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
             👁 {views}
           </div>
@@ -67,23 +52,20 @@ export const CollaborationsSection = () => {
     {
       brand: "Kimi",
       type: "Instagram Reel",
-      views: "28.6K",
       link: "https://www.instagram.com/reel/DQ_WS0_DOSJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/builder-406918.appspot.com/o/kimi.png?alt=media&token=7c1824d5-7313-4c54-99a3-a0684b655c30",
+      thumbnail: "/images/kimmy.png",
     },
     {
       brand: "LeapScholar",
       type: "Instagram Reel",
-      views: "34.1K",
       link: "https://www.instagram.com/reel/DQ_WS0_DOSJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/builder-406918.appspot.com/o/leap.png?alt=media&token=a778382c-47cd-40dc-84e4-774e52791836",
+      thumbnail: "/images/leap.png",
     },
     {
       brand: "SuperProfileBio",
       type: "Instagram Reel",
-      views: "Scheduled",
       link: "https://www.instagram.com/reel/DQ_WS0_DOSJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      thumbnail: "https://firebasestorage.googleapis.com/v0/b/builder-406918.appspot.com/o/super.png?alt=media&token=875c7659-335e-4993-a991-645b3e51f879",
+      thumbnail: "/images/super.png",
     },
   ];
 
