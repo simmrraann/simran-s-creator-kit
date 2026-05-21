@@ -74,8 +74,13 @@ const DonutChart = ({ segments, centerText }: { segments: { value: number; color
 
 export const InsightsSection = () => {
   const reachSegments = [
+<<<<<<< HEAD
     { value: 77, color: "hsl(280 60% 70%)", label: "Non-Followers" },
     { value: 23, color: "hsl(45 90% 65%)", label: "Followers" },
+=======
+    { value: 88.8, color: "hsl(280 60% 70%)", label: "Non-Followers" },
+    { value: 11.2, color: "hsl(45 90% 65%)", label: "Followers" },
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
   ];
 
   return (
@@ -103,11 +108,19 @@ export const InsightsSection = () => {
                 <HandwrittenNote className="text-base">Viral Discovery! 🚀</HandwrittenNote>
               </div>
               <div className="flex flex-col md:flex-row items-center gap-8">
+<<<<<<< HEAD
                 <DonutChart segments={reachSegments} centerText="77%" />
                 <div className="space-y-4 flex-1">
                   <StatBar label="Non-Followers" value="77%" percentage={77} color="bg-[hsl(280_60%_70%)]" />
                   <StatBar label="Followers" value="23%" percentage={23} color="bg-[hsl(45_90%_65%)]" />
                   <StatBar label="Accounts Reached" value="316K" percentage={90} color="bg-[hsl(200_70%_70%)]" />
+=======
+                <DonutChart segments={reachSegments} centerText="88.8%" />
+                <div className="space-y-4 flex-1">
+                  <StatBar label="Non-Followers" value="88.8%" percentage={88.8} color="bg-[hsl(280_60%_70%)]" />
+                  <StatBar label="Followers" value="11.2%" percentage={11.2} color="bg-[hsl(45_90%_65%)]" />
+                  <StatBar label="Accounts Reached" value="467.3K+" percentage={90} color="bg-[hsl(200_70%_70%)]" />
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
                 </div>
               </div>
             </div>
@@ -118,20 +131,34 @@ export const InsightsSection = () => {
                 <HandwrittenNote className="text-base">High Retention 🌱</HandwrittenNote>
               </div>
               <div className="flex flex-wrap justify-center gap-6">
+<<<<<<< HEAD
                 <CircleStat value="75K" label="Interactions" color="bg-[hsl(200_70%_70%)]" />
                 <CircleStat value="12.6%" label="Eng. Rate" color="bg-[hsl(330_70%_75%)]" />
                 <CircleStat value="11.1K" label="Followers" color="bg-[hsl(280_60%_70%)]" />
+=======
+                <CircleStat value="85K+" label="Interactions" color="bg-[hsl(200_70%_70%)]" />
+                <CircleStat value="12.6%" label="Eng. Rate" color="bg-[hsl(330_70%_75%)]" />
+                <CircleStat value="15.8K+" label="Followers" color="bg-[hsl(280_60%_70%)]" />
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {[
+<<<<<<< HEAD
               { label: "Total Views", value: "594K+", icon: "👁", color: "from-[hsl(200_70%_85%)] to-[hsl(200_70%_95%)]" },
               { label: "Accounts Reached", value: "316K", icon: "💬", color: "from-[hsl(330_70%_85%)] to-[hsl(330_70%_95%)]" },
               { label: "New Followers", value: "3.7K", icon: "👤", color: "from-[hsl(280_60%_85%)] to-[hsl(280_60%_95%)]" },
               { label: "Avg. Reel Views", value: "7.1K", icon: "💭", color: "from-[hsl(45_90%_80%)] to-[hsl(45_90%_92%)]" },
               { label: "Non-Follower Reach", value: "77%", icon: "📈", color: "from-green-200 to-green-300" },
+=======
+              { label: "Total Views", value: "764.2K+", icon: "👁", color: "from-[hsl(200_70%_85%)] to-[hsl(200_70%_95%)]" },
+              { label: "Accounts Reached", value: "467.3K+", icon: "💬", color: "from-[hsl(330_70%_85%)] to-[hsl(330_70%_95%)]" },
+              { label: "New Followers", value: "4K+", icon: "👤", color: "from-[hsl(280_60%_85%)] to-[hsl(280_60%_95%)]" },
+              { label: "Content Shared", value: "50+", icon: "💭", color: "from-[hsl(45_90%_80%)] to-[hsl(45_90%_92%)]" },
+              { label: "Non-Follower Reach", value: "88.8%", icon: "📈", color: "from-green-200 to-green-300" },
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
             ].map((stat) => (
               <div key={stat.label} className={`bg-gradient-to-br ${stat.color} rounded-2xl p-5 md:p-6 text-center shadow-md border border-white/50 hover:shadow-lg transition-shadow hover:-translate-y-1`}>
                 <span className="text-2xl md:text-3xl mb-2 block">{stat.icon}</span>

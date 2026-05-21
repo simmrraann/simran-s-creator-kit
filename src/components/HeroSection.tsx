@@ -2,12 +2,21 @@ export const HeroSection = () => {
   const hero = {
     title: "Simran",
     subtitle: "AI & Productivity Creator",
+<<<<<<< HEAD
     description: "I create viral content around AI tools, student life, productivity, and self-growth helping over 594K+ viewers learn smarter every month.",
     tags: ["AI Tools", "Student Life", "Productivity", "Self-Growth"],
     stats: {
       followers: "11.1K",
       monthlyViews: "594K+",
       nonFollowerReach: "77%"
+=======
+    description: "Creating content around AI, productivity, student growth, and documenting the process while helping over 764.2K+ viewers learn smarter every 30 days.",
+    tags: ["AI Tools", "Student Life", "Productivity", "Self-Growth"],
+    stats: {
+      followers: "15.8K+",
+      monthlyViews: "764.2K+",
+      nonFollowerReach: "88.8%"
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
     },
     heroImage: "/images/simran-photo.jpg",
     backgroundStyle: {

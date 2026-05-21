@@ -1,5 +1,9 @@
 import { HeroSection } from "@/components/HeroSection";
 import { InsightsSection } from "@/components/InsightsSection";
+<<<<<<< HEAD
+=======
+import { AIPlaybookSection } from "@/components/AIPlaybookSection";
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
 import { RatesSection } from "@/components/RatesSection";
 import { ContactSection } from "@/components/ContactSection";
 import { NavBar } from "@/components/NavBar";
@@ -15,6 +19,12 @@ const Index = () => {
       <div id="insights">
         <InsightsSection />
       </div>
+<<<<<<< HEAD
+=======
+      <div id="ai-playbook">
+        <AIPlaybookSection />
+      </div>
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
       <div id="rates">
         <RatesSection />
       </div>

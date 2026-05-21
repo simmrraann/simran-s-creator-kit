@@ -39,12 +39,20 @@ export const RatesSection = () => {
     {
       title: "Reel on My Page",
       price: "₹5,000",
+<<<<<<< HEAD
       features: ["Posted on @failing_vlogs", "Collaborator invite", "High non-follower reach", "Engaging hook & CTA"],
+=======
+      features: ["Posted on @simranbuildss", "Collaborator invite", "High non-follower reach", "Engaging hook & CTA"],
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
       popular: true,
     },
     {
       title: "UGC Reel + 1 Story",
+<<<<<<< HEAD
       price: "₹4,300",
+=======
+      price: "₹3,500",
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
       features: ["UGC Reel for brand", "Story frame with link", "Product showcase", "High conversion"],
     },
     {

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Mail, Instagram, Phone, ExternalLink } from "lucide-react";
+=======
+import { Mail, Instagram, Phone, Linkedin, ExternalLink } from "lucide-react";
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
 import { Sparkle } from "./Sparkle";
 
 export const ContactSection = () => {
@@ -41,7 +45,11 @@ export const ContactSection = () => {
             </a>
 
             <a
+<<<<<<< HEAD
               href="https://instagram.com/failing_vlogs"
+=======
+              href="https://instagram.com/simranbuildss"
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center p-6 rounded-2xl bg-secondary-foreground/10 hover:bg-secondary-foreground/20 transition-all duration-300"
@@ -50,7 +58,24 @@ export const ContactSection = () => {
                 <Instagram className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="font-medium">Instagram</span>
+<<<<<<< HEAD
               <span className="text-sm text-secondary-foreground/70 mt-1">@failing_vlogs</span>
+=======
+              <span className="text-sm text-secondary-foreground/70 mt-1">Simranbuildss</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/simran-builds/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center p-6 rounded-2xl bg-secondary-foreground/10 hover:bg-secondary-foreground/20 transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Linkedin className="w-6 h-6 text-white" />
+              </div>
+              <span className="font-medium">LinkedIn</span>
+              <span className="text-sm text-secondary-foreground/70 mt-1">simran-builds</span>
+>>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
             </a>
 
             <a
