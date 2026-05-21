@@ -32,7 +32,7 @@ export const NavBar = () => {
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <h1 className='font-handwriting text-2xl cursor-pointer' onClick={() => scrollToSection('home')}>Simran</h1>
         <ul className="flex items-center space-x-8">
-          <li className='font-display text-lg cursor-pointer' onClick={() => scrollToSection('collaborations')}>Collaborations</li>
+          <li className='font-display text-lg cursor-pointer' onClick={() => scrollToSection('ai-playbook')}>Community</li>
           <li className='font-display text-lg cursor-pointer' onClick={() => scrollToSection('insights')}>Insights</li>
           <li className='font-display text-lg cursor-pointer' onClick={() => scrollToSection('rates')}>Rates</li>
           <li className='font-display text-lg cursor-pointer' onClick={() => scrollToSection('contact')}>Contact</li>

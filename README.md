@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/18a9f445-2697-4206-9b6d-e905ae423186
+**URL**: https://github.com/simmrraann/simran-s-creator-kit
 
 ## How can I edit this code?
 
@@ -24,7 +24,7 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/simmrraann/simran-s-creator-kit.git
 
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>

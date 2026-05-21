@@ -70,35 +70,35 @@ export const AIPlaybookSection = () => {
                     <div className="carousel-mask overflow-hidden rounded-[2rem]">
                       <div className="carousel-track flex gap-5 animate-carousel will-change-transform">
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-cover" />
+                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Live workshop snapshot</p>
                             <p className="text-xs text-muted-foreground mt-1">A high-energy session capture with real attendees.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-2.jpeg" alt="AI Playbook community screenshot 2" className="h-64 w-full object-cover" />
+                          <img src="/images/playbook-2.jpeg" alt="AI Playbook community screenshot 2" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Workshop stage</p>
                             <p className="text-xs text-muted-foreground mt-1">Weekly sessions packed with AI learning moments.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-3.jpeg" alt="AI Playbook community screenshot 3" className="h-64 w-full object-cover" />
+                          <img src="/images/playbook-3.jpeg" alt="AI Playbook community screenshot 3" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Member discussion</p>
                             <p className="text-xs text-muted-foreground mt-1">Community conversations and daily AI updates.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-4.jpeg" alt="AI Playbook community screenshot 4" className="h-64 w-full object-cover" />
+                          <img src="/images/playbook-4.jpeg" alt="AI Playbook community screenshot 4" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Group catchups</p>
                             <p className="text-xs text-muted-foreground mt-1">Clear, visual community moments for every attendee.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-cover" />
+                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Live workshop snapshot</p>
                             <p className="text-xs text-muted-foreground mt-1">A high-energy session capture with real attendees.</p>
@@ -107,35 +107,12 @@ export const AIPlaybookSection = () => {
                       </div>
                     </div>
                     <div className="mt-6 rounded-[2rem] border border-secondary/10 bg-secondary/10 p-4 shadow-sm">
-                      <p className="text-sm font-medium text-secondary">A creative glimpse into AI Playbook’s workshops, member sessions, and collaboration energy.</p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[2.5rem] border border-white/60 bg-white/80 p-6 shadow-xl shadow-secondary/10 backdrop-blur-sm">
-                    <p className="text-xs uppercase tracking-[0.35em] text-secondary/60 mb-4">Why join</p>
-                    <div className="space-y-4">
-                      <div className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-4 shadow-sm">
-                        <p className="text-sm font-medium text-secondary">Build AI habits with curated daily updates.</p>
-                      </div>
-                      <div className="rounded-3xl bg-gradient-to-br from-gold/10 to-cream/10 p-4 shadow-sm">
-                        <p className="text-sm font-medium text-secondary">Attend live workshops designed for students and creators.</p>
+                        <p className="text-sm font-medium text-secondary">A creative glimpse into AI Playbook’s workshops, member sessions, and collaboration energy.</p>
                       </div>
                     </div>
-                  </div>
                 </div>
             </div>
 
-            <div className="rounded-[2.5rem] border border-white/60 bg-white/80 p-6 shadow-xl shadow-secondary/10 backdrop-blur-sm">
-              <p className="text-xs uppercase tracking-[0.35em] text-secondary/60 mb-4">Why join</p>
-              <div className="space-y-4">
-                <div className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-4 shadow-sm">
-                  <p className="text-sm font-medium text-secondary">Build AI habits with curated daily updates.</p>
-                </div>
-                <div className="rounded-3xl bg-gradient-to-br from-gold/10 to-cream/10 p-4 shadow-sm">
-                  <p className="text-sm font-medium text-secondary">Attend live workshops designed for students and creators.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
