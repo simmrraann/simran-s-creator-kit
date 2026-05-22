@@ -197,8 +197,6 @@
   .animate-bounce-subtle {
     animation: bounce-subtle 2s ease-in-out infinite;
   }
-<<<<<<< HEAD
-=======
 
   .animate-slide-horizontal {
     animation: slide-horizontal 18s ease-in-out infinite;
@@ -365,7 +363,6 @@
     min-width: 220px;
     width: min(280px, 90vw);
   }
->>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
 }
 
 @keyframes float {
@@ -417,8 +414,6 @@
   }
 }
 
-<<<<<<< HEAD
-=======
 @keyframes slide-horizontal {
   0%, 100% {
     transform: translateX(0);
@@ -428,7 +423,6 @@
   }
 }
 
->>>>>>> ce9ce27 (Update AI Playbook carousel and portfolio content)
 @keyframes slide-up {
   0% {
     opacity: 0;

@@ -51,6 +51,7 @@ export const ContactSection = () => {
               </div>
               <span className="font-medium">Instagram</span>
               <span className="text-sm text-secondary-foreground/70 mt-1">Simranbuildss</span>
+            </a>
 
             <a
               href="https://wa.me/918999393617"

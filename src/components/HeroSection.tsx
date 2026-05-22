@@ -9,7 +9,7 @@ export const HeroSection = () => {
       monthlyViews: "764.2K+",
       nonFollowerReach: "88.8%"
     },
-    heroImage: "/images/simran-photo.jpg",
+    heroImage: `${import.meta.env.BASE_URL}images/simran-photo.jpg`,
     backgroundStyle: {
       gradient: "linear-gradient(to bottom right, #fdf5ee, #fbead7)",
       textFont: "Playfair Display",

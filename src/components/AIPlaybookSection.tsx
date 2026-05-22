@@ -1,6 +1,9 @@
 import { Sparkle } from "./Sparkle";
 import { Users, CalendarDays, BookOpen, MessageCircle } from "lucide-react";
 
+const baseImagePath = import.meta.env.BASE_URL ?? "/";
+const image = (name: string) => `${baseImagePath}images/${name}`;
+
 const FeatureCard = ({ icon: Icon, title }: { icon: typeof Users; title: string }) => (
   <div className="flex items-start gap-4 rounded-3xl border border-[hsl(330_60%_90%)] bg-white/80 p-5 shadow-sm shadow-secondary/10 transition-shadow duration-300 hover:shadow-lg">
     <div className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary/10 text-secondary shadow-sm">
@@ -70,35 +73,35 @@ export const AIPlaybookSection = () => {
                     <div className="carousel-mask overflow-hidden rounded-[2rem]">
                       <div className="carousel-track flex gap-5 animate-carousel will-change-transform">
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
+                          <img src={image("playbook-1.jpeg")} alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Live workshop snapshot</p>
                             <p className="text-xs text-muted-foreground mt-1">A high-energy session capture with real attendees.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-2.jpeg" alt="AI Playbook community screenshot 2" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
+                          <img src={image("playbook-2.jpeg")} alt="AI Playbook community screenshot 2" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Workshop stage</p>
                             <p className="text-xs text-muted-foreground mt-1">Weekly sessions packed with AI learning moments.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-3.jpeg" alt="AI Playbook community screenshot 3" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
+                          <img src={image("playbook-3.jpeg")} alt="AI Playbook community screenshot 3" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Member discussion</p>
                             <p className="text-xs text-muted-foreground mt-1">Community conversations and daily AI updates.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-4.jpeg" alt="AI Playbook community screenshot 4" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
+                          <img src={image("playbook-4.jpeg")} alt="AI Playbook community screenshot 4" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Group catchups</p>
                             <p className="text-xs text-muted-foreground mt-1">Clear, visual community moments for every attendee.</p>
                           </div>
                         </div>
                         <div className="carousel-card min-w-[260px] md:min-w-[300px] flex-shrink-0 rounded-[2rem] overflow-hidden border border-white/20 bg-white shadow-lg shadow-secondary/10">
-                          <img src="/images/playbook-1.jpeg" alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
+                          <img src={image("playbook-1.jpeg")} alt="AI Playbook community screenshot 1" className="h-64 w-full object-contain bg-[#fbf4ec] object-center" />
                           <div className="bg-white/95 p-4">
                             <p className="text-sm font-semibold text-secondary">Live workshop snapshot</p>
                             <p className="text-xs text-muted-foreground mt-1">A high-energy session capture with real attendees.</p>

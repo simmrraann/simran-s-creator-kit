@@ -54,21 +54,21 @@ export const CollaborationsSection = () => {
       type: "AI Transcription Tool",
       views: "163K+",
       link: "https://www.instagram.com/reel/DC_Viral_Link/",
-      thumbnail: "/images/vomo.png",
+      thumbnail: `${import.meta.env.BASE_URL}images/vomo.png`,
     },
     {
       brand: "Matiks",
       type: "Student Productivity",
       views: "45K+",
       link: "https://www.instagram.com/reel/Matiks_Link/",
-      thumbnail: "/images/matiks.png",
+      thumbnail: `${import.meta.env.BASE_URL}images/matiks.png`,
     },
     {
       brand: "LeapScholar",
       type: "Education & Study Abroad",
       views: "120K+",
       link: "https://www.instagram.com/reel/Leap_Link/",
-      thumbnail: "/images/leap.png",
+      thumbnail: `${import.meta.env.BASE_URL}images/leap.png`,
     },
   ];
 
