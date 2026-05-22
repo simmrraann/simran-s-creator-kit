@@ -76,56 +76,43 @@ export const AgencySection = () => {
             </div>
 
             <div className="relative w-full max-w-[520px] rounded-[2.5rem] border border-[#d8d0c2] bg-white/85 p-6 shadow-xl shadow-secondary/10">
-              <div className="flex items-center justify-between rounded-3xl border border-[#eef0e7] bg-[#f8f2e7] p-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#e7f2d8] text-[#4f663d] font-bold">AIJ</div>
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.35em] text-secondary/70">AI Jugaad</p>
-                    <p className="text-xs text-secondary/60">Premium creative agency</p>
-                    <p className="mt-1 text-[0.7rem] uppercase tracking-[0.35em] text-secondary/60">AI Jugaad logo</p>
-                  </div>
-                </div>
-                <span className="rounded-full bg-[#d7e2b8] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-[#3f5131]">
-                  Brand
-                </span>
-              </div>
-
-              <div className="mt-6 grid gap-4">
-                <div className="rounded-[2rem] border border-[#f1e7d9] bg-[#fbf6ef] p-5 shadow-sm">
-                  <div className="flex items-center justify-between gap-3">
+              <div className="grid gap-4">
+                <div className="rounded-[2.5rem] border border-[#eef0e7] bg-[#f8f2e7] p-5 shadow-sm">
+                  <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-sm font-semibold text-secondary">AI-powered visuals</p>
-                      <p className="mt-2 text-xs text-secondary/60">Tailored imagery and motion for business stories.</p>
+                      <p className="text-sm uppercase tracking-[0.35em] text-secondary/70">Sample website</p>
+                      <a
+                        href="https://atelier-aura-cinematic.lovable.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-block text-secondary font-semibold hover:text-[#5d7050]"
+                      >
+                        atelier-aura-cinematic.lovable.app
+                      </a>
                     </div>
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-[#e7f2d8] text-[#4f663d] text-xs font-semibold">
-                      ✦
+                    <span className="rounded-full bg-[#d7e2b8] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-[#3f5131]">
+                      Sample
                     </span>
                   </div>
                 </div>
-                <div className="rounded-[2rem] border border-[#f1e7d9] bg-[#fbf6ef] p-5 shadow-sm">
-                  <div className="flex items-center justify-between gap-3">
+
+                <div className="rounded-[2.5rem] border border-[#eef0e5] bg-[#fbf7ef] p-5 shadow-sm">
+                  <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-sm font-semibold text-secondary">Creative automation</p>
-                      <p className="mt-2 text-xs text-secondary/60">Systems that scale storytelling across web and social.</p>
+                      <p className="text-sm uppercase tracking-[0.35em] text-secondary/70">Sample video</p>
+                      <a
+                        href={`${import.meta.env.BASE_URL}videos/honda.ugc.mp4`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-block text-secondary font-semibold hover:text-[#5d7050]"
+                      >
+                        honda.ugc.mp4
+                      </a>
                     </div>
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-[#e7f2d8] text-[#4f663d] text-xs font-semibold">
-                      ✦
+                    <span className="rounded-full bg-[#d7e2b8] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-[#3f5131]">
+                      Sample
                     </span>
                   </div>
-                </div>
-              </div>
-
-              <div className="mt-8 grid gap-4">
-                <div className="rounded-[2rem] bg-[#fbf6ef] p-5 shadow-sm border border-[#f1e7d9]">
-                  <div className="flex items-center gap-2 text-sm text-secondary font-medium">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-[#e7f2d8] text-[#4f663d]">•</span>
-                    <span>Built with AI</span>
-                  </div>
-                  <p className="mt-3 text-sm text-secondary/75">Beautiful product previews with subtle motion and premium polish.</p>
-                </div>
-                <div className="rounded-[2rem] bg-[#fff7ec] p-5 shadow-sm border border-[#f4e8d8]">
-                  <p className="text-xs uppercase tracking-[0.35em] text-secondary/60">Digital alchemy</p>
-                  <p className="mt-3 text-sm font-semibold text-secondary">Strategic visuals that feel tactile, not templated.</p>
                 </div>
               </div>
             </div>
