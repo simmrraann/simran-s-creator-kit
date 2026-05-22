@@ -3,7 +3,7 @@ import { InsightsSection } from "@/components/InsightsSection";
 
 
 import { AIPlaybookSection } from "@/components/AIPlaybookSection";
-
+import { AgencySection } from "@/components/AgencySection";
 import { RatesSection } from "@/components/RatesSection";
 import { ContactSection } from "@/components/ContactSection";
 import { NavBar } from "@/components/NavBar";
@@ -24,6 +24,9 @@ const Index = () => {
       </div>
       <div id="rates">
         <RatesSection />
+      </div>
+      <div id="agency">
+        <AgencySection />
       </div>
       <div id="contact">
         <ContactSection />
